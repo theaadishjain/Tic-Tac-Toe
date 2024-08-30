@@ -12,16 +12,17 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
-    flex-direction: column; /* Change flex direction to column */
-    justify-content: flex-start; /* Align items to the top */
+    flex-direction: column;
+    justify-content: flex-start; 
     align-items: center;
     min-height: 100vh;
+    padding: 1rem; 
 }
 
 h1 {
     font-weight: bold;
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .msg-container {
@@ -31,10 +32,11 @@ h1 {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    position: absolute; /* Make the container position absolute */
-    top: 10%; /* Position it at the top center */
+    position: absolute; 
+    top: 6.5%;
     left: 50%;
-    transform: translateX(-50%); /* Center the container horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 10; /* Ensure it stays on top of other elements */
 }
 
 #msg {
@@ -44,12 +46,12 @@ h1 {
 }
 
 .container {
-    height: 70vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Add some margin to push the grid down */
+    flex-direction: column;
+    gap: 2rem; /* Space between the game and the reset button */
+    margin-top: 15vh; /* Add some top margin to avoid overlapping with the message */
 }
 
 .game {
@@ -84,8 +86,8 @@ h1 {
     color: black;
     border-radius: 1rem;
     border: none;
-    margin-top: 1rem;
     cursor: pointer;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .hide {
