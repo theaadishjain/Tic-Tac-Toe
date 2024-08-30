@@ -34,6 +34,10 @@ A simple yet classic Tic-Tac-Toe game implemented using HTML, CSS, and JavaScrip
    ```
 3. Open the `index.html` file in your web browser to start playing.
 
+## Project Screenshot
+![image](https://github.com/user-attachments/assets/c3ec0d16-9515-4977-916a-0902bbd8f279)
+
+
 ## Contributing
 Contributions are welcome! If you have any improvements or new features in mind, feel free to fork the repository, make your changes, and submit a pull request.
 
