@@ -1,76 +1,122 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
 }
 
-body{
-    background-color:#548687;
+body {
+    background-color: #548687;
     text-align: center;
-    background-image: url('tic\ tac\ toe\ bg.jpg');
-    background-size: cover; /* Ensures the background covers the entire area */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the background image */
-    }
-h1{
-        font-weight: bold;
-        color: white;
-    }
-.container{
-    height:70vh;
+    background-image: url('tic tac toe bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+h1 {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.container {
+    height: 70vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
-.game{
+
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     gap: 1.5vmin;
 }
-.box{
-    height: 18vmin ;
+
+.box {
+    height: 18vmin;
     width: 18vmin;
-    border-radius:1rem;
-    border:none;
+    border-radius: 1rem;
+    border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 8vmin;
-    color:#b0413e;
+    color: #b0413e;
     background-color: #ffffc7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-#reset-btn{
+#reset-btn, #new-btn {
     padding: 1rem;
     font-size: 1.25rem;
     background-color: white;
-    color:black;
+    color: black;
     border-radius: 1rem;
-    border: none; 
-    
+    border: none;
+    margin-top: 1rem; 
+    cursor: pointer; 
 }
-#new-btn{
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color: white;
-    color:black;
-    border-radius: 1rem;
-    border: none; 
+
+#msg {
+    color: #ffffc7;
+    font-size: 6vmin; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
 }
-#msg{
-    color:#ffffc7 ;
-    font-size: 8vmin;
-}
-.msg-container{
+
+.msg-container {
     height: 30vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
-.hide{
+
+.hide {
     display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .game {
+        height: 80vmin;
+        width: 80vmin;
+    }
+
+    .box {
+        height: 22vmin;
+        width: 22vmin;
+        font-size: 10vmin;
+    }
+
+    #msg {
+        font-size: 7vmin;
+    }
+}
+
+@media (max-width: 480px) {
+    .game {
+        height: 90vmin;
+        width: 90vmin;
+    }
+
+    .box {
+        height: 28vmin;
+        width: 28vmin;
+        font-size: 12vmin;
+    }
+
+    #msg {
+        font-size: 8vmin;
+    }
 }
